@@ -227,7 +227,7 @@ REGISTRY_HTTP_TLS_KEY: /certs/domain.key # SSL cert key path
 &nbsp;
 
 ```
-$ kubectl -n gw create -f rc-registry.yaml
+$ kubectl -n default create -f rc-registry.yaml
 ```
 
 &nbsp;
