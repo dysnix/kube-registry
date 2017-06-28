@@ -8,7 +8,7 @@ With this guide you will be able to setup Docker Private Registry inside Kuberne
 
 ### Creating S3 Bucket
 
-First of all, we need to create an S3 bucket located in the same region where your cluster is set up. Let's name it "*s3-storage*". We also assume you are familiar with AWS S3 interface and creating it should not be a problem.
+First of all, we need to create an S3 bucket located in the same region where your cluster is set up. Lets name it "*s3-storage*". We also assume you are familiar with AWS S3 interface and creating it should not be a problem.
 
 &nbsp;
 
@@ -182,7 +182,7 @@ $ kubectl -n default create secret generic htpasswd-file --from-file=htpasswd
 
 &nbsp;
 
-Then, you need to 'add' this file to your **replication controller** as a volume, just like it described below:
+Then, you need to 'add' this file to your **replication controller** as a volume, just like it is described below:
 
 &nbsp;
 
@@ -248,7 +248,7 @@ kube-registry-c98v7 1/1 Running 0 5m
 
 &nbsp;
 
-* When **replocation controller** is up and running, you have to create an A-record so your registry will be available via FQDN like registry.domain.com. In our guide, we're using AWS Route53 as a DNS zone hoster. You can retrieve ELB URL you will need for A-record later by running:
+* When **replication controller** is up and running, you have to create an A-record so your registry will be available via FQDN like registry.domain.com. In our guide, we're using AWS **Route53** as a DNS zone hoster. You can retrieve ELB URL you will need for A-record later by running:
 
 &nbsp;
 
@@ -269,7 +269,7 @@ Take this URL and create a new record set (type = A-record) inside Route53, don'
 
 &nbsp;
 
-* You can now test your registry and also check how your BasicAuth works:
+* You can now test your Kube-Registry and also check how your BasicAuth works:
 
 &nbsp;
 
